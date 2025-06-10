@@ -16,11 +16,14 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -33,10 +36,22 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "La aplicación accedera a tus fotos para contar las calorias"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "dc1d715d-1594-4c35-8ada-0cf8641eb361"
+      }
     }
   }
 }
