@@ -19,7 +19,8 @@
       "edgeToEdgeEnabled": true,
       "permissions": [
         "android.permission.RECORD_AUDIO"
-      ]
+      ],
+      "package": "com.carlosmgonzalez.calia"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +28,12 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "https://calia--p5hgqwfaei.expo.app"
+        }
+      ],
       [
         "expo-splash-screen",
         {
@@ -42,7 +48,8 @@
         {
           "photosPermission": "La aplicación accedera a tus fotos para contar las calorias"
         }
-      ]
+      ],
+      "react-native-edge-to-edge"
     ],
     "experiments": {
       "typedRoutes": true

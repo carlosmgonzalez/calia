@@ -74,13 +74,9 @@ export const POST = async (request: Request) => {
     ],
   });
 
-  console.log(JSON.stringify(response, null, 2));
-
   const text = response.candidates![0].content!.parts![0].text;
   const cleanedText = text!.replace(/```json\n?|\n?```/g, "").trim();
   const parseText = JSON.parse(cleanedText);
-
-  console.log(cleanedText);
 
   return Response.json({
     ok: true,
